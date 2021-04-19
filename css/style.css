@@ -1,0 +1,85 @@
+/* reset css */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,400&display=swap');
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font: 1.6rem 'Open Sans',sans-serif;
+    margin: 0;
+
+}
+h1,
+h2,
+h3,p,ul,ol,figure{
+    margin: 0;
+    list-style: none;
+    padding:0;
+    font-weight: 300;
+}
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #222;
+}
+header{
+    background-color: #222;
+}
+header h1{
+    line-height: 6.5rem;
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+}
+main .anim{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40rem;
+    height: 40rem;
+    border: solid .1rem transparent;
+    background-color: #fafafa;
+    z-index: 1;
+    border-radius: 1rem;
+}
+.anim .wheel_1, .anim .wheel_2{
+    position: absolute;
+    z-index: 2;
+}
+.anim .wheel_1{
+    top: 1rem;
+    left: 1rem;
+    animation: wheel_1 5s linear infinite;
+}
+.anim .wheel_2{
+    top: 8rem;
+    left: 12rem;
+    animation: wheel_2 5s linear infinite;
+}
+.anim:hover .wheel_1, .anim:hover .wheel_2{
+    animation-play-state: paused;
+}
+
+/* animation image clé */
+@keyframes wheel_1 {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+@keyframes wheel_2 {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+    
+}

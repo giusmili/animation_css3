@@ -1,0 +1,208 @@
+/* reset css */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,400&display=swap');
+
+html{
+    font-size: 62.5%;
+    overflow-y: hidden;
+    overflow-x: hidden; /* cela masque le scroll du navigateur */
+}
+
+body{
+    font: 1.6rem 'Open Sans',sans-serif;
+    margin: 0;
+    background-color: #fff;
+    animation: bg 6s linear infinite alternate;
+
+}
+@keyframes bg {
+    from{
+        background-color: #fff;
+    }
+    to{
+        background-color: rgb(245, 218, 144);
+    }
+    
+}
+h1,
+h2,
+h3,p,ul,ol,figure{
+    margin: 0;
+    list-style: none;
+    padding:0;
+    font-weight: 300;
+}
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #222;
+}
+button{
+    padding: 0;
+    font-size: initial;
+    background-color: transparent;
+    border: 0;
+    color: #222;
+    cursor: pointer;
+}
+header{
+    background-color: #222;
+}
+header h1{
+    line-height: 6.5rem;
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+    animation: texte 0.5s linear 8 alternate;
+}
+@keyframes texte {
+    from{
+        opacity: 0;
+        transform: scale(2.0);
+        color: rgb(200,0,0)
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+        color: #fff;
+
+    }
+}
+main{
+    max-width: 80rem;
+    margin: 5rem auto 1rem;
+    padding: 1rem;
+    font-size: 0;
+}
+main figure{
+    display: inline-block;
+    width: calc(100% / 3 - .5rem);
+    vertical-align: top;
+    text-align: center;
+    font-size: 1.6rem;
+}
+figure .logo-1{
+    animation: logo_1 6s linear infinite;
+    animation-delay: 5s;
+    
+}
+@keyframes identifier {
+    
+}
+figure:hover .logo-1{
+    animation-play-state: paused;
+}
+@keyframes logo_1 {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+figure .logo-2{
+    animation: logo_2 1s linear 8 alternate;
+    animation-delay: 10s;
+}
+@keyframes logo_2 {
+    0%{
+        transform: scale(1);
+    }
+    20%{
+        transform: scale(2);
+    }
+    40%{
+        transform: rotate(-360deg);
+    }
+    50%{
+        transform: translateY(-4rem);
+    }
+    60%{
+        transform: rotate(360deg);
+    }
+}
+/* logo 3 */
+figure .logo-3{
+    animation: logo_3 .9s linear infinite alternate 15s;
+}
+@keyframes logo_3 {
+    0%{
+        transform: skew(20deg, 20deg);
+    }
+    20%{
+        transform: skew(-20deg, -20deg);
+    }
+    30%{
+        transform: skew(-20deg, -20deg);
+    }
+    40%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-360deg);
+    }
+    60%{
+        transform: rotate(360deg);
+    }
+    70%{
+        transform: rotate(0deg);
+    }
+    80%{
+        transform: translateY(-8rem);
+    }
+    
+}
+main figure img{
+    display: inline-block;
+    max-width: 100%;
+}
+main figure:nth-of-type(2){
+    margin: 0 .5rem;
+}
+main figure figcaption{
+    background-color: rgba(0,0,0,0.1);
+    padding: .3rem;
+    margin-top: 1rem;
+}
+main figure figcaption h2{
+    font-size: 1.7rem;
+    line-height: 4.5rem;
+}
+.bar-anim{
+    width: 30rem;
+    margin: 1.5rem auto 0;
+    background-color: #ccc;
+    border: solid .1rem rgb(167, 164, 164);
+    overflow: hidden;
+    text-align: center;
+}
+.bar-anim button{
+    display: inline-block;
+    text-transform: uppercase;
+    line-height: 6rem;
+    
+    
+}
+.bar-anim:hover button{
+    animation: button_anim 0.3s linear 5 alternate;
+}
+
+
+@keyframes button_anim{
+    0%{
+       
+        width: 50%;
+        
+        color: #222;
+    }
+    100%{
+        background-color: #222;
+        width: 100%;
+        font-size: 1.7rem;
+        color: #fff;
+        
+    }
+    
+}

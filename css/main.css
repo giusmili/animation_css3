@@ -1,0 +1,44 @@
+/* reset css */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,400&display=swap');
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font: 1.6rem 'Open Sans',sans-serif;
+    margin: 0;
+
+}
+h1,
+h2,
+h3,p,ul,ol,figure{
+    margin: 0;
+    list-style: none;
+    padding:0;
+    font-weight: 300;
+}
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #222;
+}
+header{
+    background-color: #222;
+}
+header h1{
+    line-height: 6.5rem;
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+}
+main ul{
+    max-width: 80rem;
+    margin: 0 auto;
+}
+/* 
+    display inline-block
+
+*/
